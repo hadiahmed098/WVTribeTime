@@ -1,5 +1,4 @@
 <?php
-    include(__DIR__."/resources/lookup.php");
     session_start();
     if($_SESSION["time"] - time() >= 600)
     {
@@ -28,7 +27,7 @@
     <div id="menu" class="card">
       <div id="userinfo">
         <span id="Name" style="font-size: 20px;"><?php echo $_SESSION["name"] ?></span>
-        <p id="idnum" style="font-size: 15px;"><?php echo $_SESSION["id"] ?></p>
+        <p id="idnum" style="font-size: 15px;"><?php echo $_SESSION["email"] ?></p>
 
       </div>
       <div id="menuoptions">
@@ -46,7 +45,7 @@
 
     <div id="content" class="card">
       <div id="information">
-        <div id="info">Next Tribe Time is <span id="date">date</span>.<br><br><br>Currently, <span id="num">0</span> <span id="grammer">students</span> are signed up for your room.<br>
+        <div id="info">Next Tribe Time is <span id="date">date</span>.<br><br><br>Currently, <span id="num">0</span> <span id="grammer">students</span> are signed up for your room.
         </div>
           
         <div id="change">Current Capacity for Tribe Time is <span id="cap">0</span>.<br><br>

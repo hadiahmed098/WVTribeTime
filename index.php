@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Tribe Time Portal</title>
+        <title>Tribe Time Scheduling Portal</title>
         <link href="style.css" rel="stylesheet" type="text/css">
     </head>
     
@@ -15,7 +15,7 @@
                 <p>Click <a href="sso.php?test=self" style="color: gray;">here</a> to manually redirect</p>
             </div>
         
-        <div id = "footer"> Property of Waubonsie Valley High School | <a href="wvhs.ipsd.org">wvhs.ipsd.org</a> | email@domain.com</div>
+        <div id = "footer"> Property of Waubonsie Valley High School | <a href="http://wvhs.ipsd.org">wvhs.ipsd.org</a> | email@domain.com</div>
     </body>
     <script type="text/javascript">setTimeout(function(){
     window.location.href = "sso.php?test=auto";

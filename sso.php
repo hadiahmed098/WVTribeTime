@@ -2,6 +2,9 @@
     if($_GET["test"]=="self")
     {
         session_start();
+        $_SESSION["time"] = time();
+	   $_SESSION["name"] = "John Doe";
+	   $_SESSION["email"] = "john_doe@ipsd.org";
     }
 
 ?>
@@ -22,7 +25,8 @@
         <div id="text">Tribe Time Scheduling Portal</div>
     </div>
     
-    <a href="home.php">nice</a>
+    <a href="student.php">student</a>
+    <a href="teacher.php">teacher</a>
     
 </body>
 </html>

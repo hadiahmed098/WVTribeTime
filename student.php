@@ -1,6 +1,7 @@
 <?php
+    include("lookup.php");
     session_start();
-    if(!isset($_SESSION["id"]))
+    if((isset($_SESSION["time"]) || time() - $_SESSION["time"] >= 600)
     {
         header("LOCATION: index.php");
         exit();
@@ -27,7 +28,7 @@
     <div id="menu" class="card">
       <div id="userinfo">
         <span id="Name" style="font-size: 20px;"><?php echo $_SESSION["name"] ?></span>
-        <p id="idnum" style="font-size: 15px;"><?php echo $_SESSION["id"] ?></p>
+        <p id="idnum" style="font-size: 15px;"><?php echo $_SESSION["email"] ?></p>
 
       </div>
       <div id="menuoptions">
@@ -45,17 +46,22 @@
       <div id="information">
         <div id="current">Next Tribe Time is <span id="date">date</span>.<br><br><br>You are currently assigned to <span id="class">class</span> in room <span id="room">room</span>.
         </div>
-        <div id="change">Make a Change<br><br>Choose a New Class<br><br>
-          <select id="select">
-            <option value="113">Quiet Study</option>
+        <?php if(date("w") =="2" or true) {
+        echo "<div id=\"change\">Make a Change<br><br>Choose a New Class<br><br>
+          <select id=\"select\">
+            <option value=\"113\">Quiet Study</option>
           </select>
-          <button id="approveChange" class="button" onclick="submitChange()">OK</button>
-        </div>
+          <button id=\"approveChange\" class=\"button\" onclick=\"submitChange()\">OK</button>
+        </div>";
+        } else {
+        echo "<div id=\"change\">Not Able to Make Change</div>"
+        }
+        ?>
       </div>
     </div>
   </section>
-  <script type="text/javascript" src="script.js"></script>
-  <footer id="footer"> Property of Waubonsie Valley High School | <a href="wvhs.ipsd.org">wvhs.ipsd.org</a> | email@domain.com</footer>
+  <script type="text/javascript" src="stuscript.js"></script>
+  <footer id="footer"> Property of Waubonsie Valley High School | <a href="http://wvhs.ipsd.org">wvhs.ipsd.org</a> | email@domain.com</footer>
 </body>
 
 </html>
